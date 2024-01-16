@@ -40,7 +40,8 @@ export default function decorate(block) {
       pointElement.classList.add('point');
       pointElement.style.top = `${percentageTop}%`;
       pointElement.style.left = `${percentageLeft}%`;
-      pointElement.title = content;
+      pointElement.dataset.title = content;
+      pointElement.tabIndex = 0;
       imageWrapper.append(pointElement);
     });
   }

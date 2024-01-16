@@ -39,6 +39,10 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* borders */
+  --border-radius: 16px;
+  --border-radius-top: 16px 16px 0 0;
 }
 
 @font-face {

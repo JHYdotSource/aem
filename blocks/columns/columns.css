@@ -5,6 +5,7 @@
 
 .columns img {
   width: 100%;
+  border-radius: var(--border-radius);
 }
 
 .columns > div > div {

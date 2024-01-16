@@ -1,0 +1,22 @@
+.imagemap .point {
+  background-color: rgba(255 255 255 / 70%);
+  border: 4px solid var(--link-color);
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px rgba(0 0 0 / 50%);
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+  transform: translate(-50%, -50%);
+  transition: scale 0.3s ease, transform 0.3s ease;
+}
+
+.imagemap .point:hover {
+  scale: 1.2;
+  transform: translate(-40%, -40%);
+}
+
+.imagemap .imagemap-img-col {
+  position: relative;
+  width: fit-content;
+}

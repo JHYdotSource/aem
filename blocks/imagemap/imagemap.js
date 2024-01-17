@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2008-2024.
+ * All rights reserved.
+ * https://www.dotsource.de
+ *
+ * Contributors
+ * Jakob Heynemann - initial contents
+ */
+
 export default function decorate(block) {
   let imgSize;
   const imageMapPoints = [];

@@ -31,7 +31,7 @@ export default function decorate(block) {
       imgPointData.push(col.textContent);
     });
     row.remove();
-    imageMapPoints.push([imgPointData]);
+    imageMapPoints.push(imgPointData);
   });
 
   // create points with title attribute
@@ -39,7 +39,7 @@ export default function decorate(block) {
     const [imgWidth, imgHeight] = imgSize;
     const imageWrapper = block.querySelector('.imagemap-img-col');
     imageMapPoints.forEach((point) => {
-      const [x, y, content] = point[0];
+      const [x, y, content] = point;
       const percentageTop = (100 * y) / imgHeight;
       const percentageLeft = (100 * x) / imgWidth;
       const pointElement = document.createElement('div');

@@ -25,26 +25,23 @@ export default function decorate(block) {
         // picture is only content in column
         picWrapper.classList.add('imagemap-img-col');
       }
+      return;
     }
     [...row.children].forEach((col) => {
-      if (!pic) {
-        imgPointData.push(col.textContent);
-      }
+      imgPointData.push(col.textContent);
     });
-    if (!pic) {
-      row.remove();
-      imageMapPoints.push([imgPointData]);
-    }
+    row.remove();
+    imageMapPoints.push([imgPointData]);
   });
 
   // create points with title attribute
-  if (imageMapPoints.length && imgSize.length) {
+  if (imageMapPoints.length && imgSize.length === 2) {
+    const [imgWidth, imgHeight] = imgSize;
+    const imageWrapper = block.querySelector('.imagemap-img-col');
     imageMapPoints.forEach((point) => {
       const [x, y, content] = point[0];
-      const [imgWidth, imgHeight] = imgSize;
       const percentageTop = (100 * y) / imgHeight;
       const percentageLeft = (100 * x) / imgWidth;
-      const imageWrapper = block.querySelector('.imagemap-img-col');
       const pointElement = document.createElement('div');
       pointElement.classList.add('point');
       pointElement.style.top = `${percentageTop}%`;
